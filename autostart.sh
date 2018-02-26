@@ -4,4 +4,4 @@
 . /mining/oc.sh
 
 #Start mining
-python3 /mining/zm_0.6/start.py
+python3 /mining/zm/start.py
