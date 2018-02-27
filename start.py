@@ -26,7 +26,7 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--reboot', action='store_true', help="restart the machine if a 'cudaGetDeviceCount failed' error is encountered (requires root privileges)")
     args = parser.parse_args()
 
-    logging.basicConfig(filename=args.log, level=logging.INFO, format='%(message)s')
+    logging.basicConfig(filename=args.logfile, level=logging.INFO, format='%(message)s')
     logging.getLogger().addHandler(logging.StreamHandler())
    
     while True:

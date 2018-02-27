@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
+OC_SCRIPT=/mining/oc.sh
+ZM_DIR=/mining/zm
 
 #Overclocking
-. /mining/oc.sh
+. $OC_SCRIPT
 
 #Start mining
-python3 /mining/zm/start.py --launch-command '/mining/zm/zm --cfg-file=/mining/zm/zm.cfg --log=/mining/zm/zm.log' --log '/mining/zm/zm_wrapper.log'
+cd $ZM_DIR
+python3 start.py
