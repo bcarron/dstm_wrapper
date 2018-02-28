@@ -7,14 +7,14 @@ import os
 import logging
 
 def restart_miner(proc):
-    logging.info('Restarting miner...')
+    logging.info('\033[31m' + 'Restarting miner...')
     proc.kill()
 
 def process_line(args, proc, line):
     if 'cudaMemcpy 1 failed' in line:
         restart_miner(proc)
     if args.reboot and 'cudaGetDeviceCount failed' in line:
-        logging.info('Restarting system...')
+        logging.info('\033[31m' + 'Restarting system...')
         os.system('reboot')
     else:
         logging.info(line)

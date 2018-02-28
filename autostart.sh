@@ -7,4 +7,4 @@ ZM_DIR=/mining/zm
 
 #Start mining
 cd $ZM_DIR
-python3 start.py
+python3 start.py --reboot
