@@ -15,7 +15,7 @@ def process_line(args, proc, line):
         restart_miner(proc)
     if args.reboot and 'cudaGetDeviceCount failed' in line:
         logging.info('\033[31m' + 'Restarting system...')
-        os.system('reboot')
+        os.system('/sbin/shutdown -r now')
     else:
         logging.info(line)
 
